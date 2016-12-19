@@ -1,0 +1,120 @@
+.radio {
+  width: 31vw;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 1.55vw;
+  border-radius: 2.17vw;
+  -ms-box-shadow: 0 1.86vw 3.41vw -0.93vw black;
+  box-shadow: 0 1.86vw 3.41vw -0.93vw black; }
+
+.radio__header {
+  color: white;
+  font-weight: bold;
+  background-color: #eeae61;
+  padding: 2.573vw 1.736vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.radio__header-button-prev {
+  width: 1.085vw; }
+
+.radio__header-button-off {
+  width: 1.86vw; }
+
+.radio__stations-list {
+  background-color: #2e2e39;
+  color: #a3acbe;
+  padding: 1.1625vw 1.736vw; }
+
+.station {
+  padding: 1.9375vw 0 1.736vw 0; }
+
+.station:not(:last-child) {
+  border-bottom: 2px solid #44444e; }
+
+.station__link {
+  text-decoration: inherit;
+  color: inherit;
+  display: block; }
+
+.station__name_right {
+  float: right; }
+
+.station__player {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 0 2.48vw 0; }
+
+.station__cover {
+  border-radius: 50%;
+  height: 13.95vw;
+  width: 13.95vw;
+  overflow: hidden;
+  border: 3px solid; }
+
+.station__image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%; }
+
+.station__controls {
+  padding: 0.1085vw 0.7378vw;
+  border: 3px solid;
+  border-radius: 50%;
+  font-size: 2.17vw;
+  text-decoration: none;
+  color: inherit; }
+
+.radio__footer {
+  background-color: #22222b;
+  padding: 1.736vw 1.736vw 2.17vw 1.736vw;
+  text-align: center;
+  border-top: 2px solid #4d505c;
+  min-height: 3.72vw; }
+
+.radio__now-playing {
+  color: #eeae61;
+  font-variant: small-caps;
+  font-size: 1.395vw; }
+
+.radio__now-playing-station {
+  color: #9da6b9; }
+
+@media screen and (max-width: 1280px) {
+  .radio {
+    width: 400px;
+    font-size: 20px;
+    border-radius: 28px;
+    -ms-box-shadow: 0 24px 44px -12px black;
+    box-shadow: 0 24px 44px -12px black; }
+  .radio__header {
+    padding: 33.2px 22.4px; }
+  .radio__header-button-prev {
+    width: 14px; }
+  .radio__header-button-off {
+    width: 24px; }
+  .radio__stations-list {
+    padding: 15px 22.4px; }
+  .station {
+    padding: 25px 0 22.4px 0; }
+  .station__player {
+    padding: 0 0 32px 0; }
+  .station__cover {
+    height: 180px;
+    width: 180px; }
+  .station__controls {
+    padding: 1.4px 9.52px;
+    font-size: 28px; }
+  .radio__footer {
+    padding: 22.4px 22.4px 28px 22.4px;
+    min-height: 48px; }
+  .radio__now-playing {
+    font-size: 18px; } }

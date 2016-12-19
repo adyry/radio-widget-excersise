@@ -1,0 +1,30 @@
+!!!
+%head
+  %title RadioApp
+  %meta{:charset => "UTF-8"}
+  %meta{:name=>"viewport", :content=>"width=device-width", :"initial-scale"=>"1.0"}
+  %link{"rel" => "stylesheet", "href" => "./css/styles.css","type" => "text/css"}
+%body
+%script{:src => "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"}
+%script{:src => "./js/app.js"}
+.radio{:'ng-app' => 'radioApp', :'ng-controller' => 'radioCtrl'}
+  .radio__header
+    %a{:href => '#/'}
+      %img.radio__header-button-prev{:src => './img/back-arrow.png'}>
+    STATIONS
+    %a{:href => '#/'}
+      %img.radio__header-button-off{:src => './img/switch.png'}
+  .radio__stations-list
+    .station{:'ng-repeat' => 'radio in stationslist'}
+      .station__player{:'ng-show' => 'activated($index, active)'}
+        %a.station__controls{:href => '#/'} −
+        .station__cover
+          %img.station__image{:'ng-src' => '{{radio.image}}'}
+        %a.station__controls{:href => '#/'} +
+      %a.station__link{:href => '#/', :'ng-click' => 'toggle($index, active)'}
+        %span.station__name {{radio.name}}
+        %span.station__name_right {{radio.freq}}
+  .radio__footer
+    %span.radio__now-playing{:'ng-show' => 'playing()'} currently playing
+    %br
+    %span.radio__now-playing-station {{stationslist[active].name}}
